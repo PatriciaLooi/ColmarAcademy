@@ -1,0 +1,431 @@
+/* Universal Styles */
+/*
+  Remove the margin and padding in all browsers (opinionated).
+   */
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+/*
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in
+   IE on Windows Phone and in iOS.
+ */
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #989898;
+  line-height: 1.15;  /* 1 */
+  -ms-text-size-adjust: 100%;  /* 2 */
+  -webkit-text-size-adjust: 100%;  /* 2 */
+}
+
+/* Common Styles */
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h2 {font-size: 24px;}
+h3 {font-size: 22px;}
+h4 {font-size: 20px;}
+h5 {font-size: 18px;}
+
+h1,h2,h3,h4,h5 {
+  color: #4f4f4f
+}
+
+ul {
+  list-style: none;
+}
+
+.main {
+  position: relative;
+  top: 4rem;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+strong {
+  font-weight: bold;
+  color: #01161E
+}
+
+.ColmarAcademy {
+  color: #9f9b9b;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.large-info {
+  width: 60%;
+  margin: 2rem 1.5rem;
+}
+
+.large-image img,
+.large-image video {
+  width: 100%;
+}
+
+
+.small-info {
+  width: 40%;
+  padding-top: 1rem;
+}
+
+.small-block .flex-column,
+.banner .flex-column {
+  justify-content: center;
+}
+
+.small-block .flex-column {
+  width: 65%;
+}
+
+.small-image {
+  width: 35%;
+  margin: 1rem;
+}
+
+.small-image img {
+  width: 100%;
+  height: auto;
+}
+
+.small-block p {
+  margin: 0.5rem 0;
+}
+
+/* Header Settings */
+header {
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  background-color: white;
+}
+
+header div.flex {
+  flex-grow: 1;
+}
+
+header .desktop img {
+  height: 2rem;
+  width: auto;
+  margin-left: 1.5rem;
+}
+
+header span {
+  font-size: 1.25rem;
+}
+
+nav.desktop {
+  margin-right: 1rem;
+}
+
+.desktop ul li {
+  padding: 0 0.5rem;
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 620px) {
+  .mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile .flex {
+    justify-content: space-around;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+/* Banner Settings */
+.banner {
+  background-color: #c4c2c2;
+}
+
+.banner h1,
+.banner h4,
+p {
+  padding-right: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+/* .banner h4 {
+  font-family: Lora, serif;
+} */
+
+.start-button {
+  width: 60%;
+  background-color: #515151;
+  color: white;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.banner h5:hover {
+  background-color: gray;
+}
+
+@media only screen and (max-width: 872px) {
+  .banner {
+    flex-direction: column;
+  }
+
+  .banner .large-info {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+
+  .banner .small-info {
+    width: auto;
+    padding-top: 0;
+    margin: 0 2rem;
+   
+  }
+
+  .banner h1 {
+    padding-bottom: 1rem;
+     }
+
+  .banner h4 {
+    padding-bottom: 0.5rem;
+  
+  }
+
+  .banner h5 {
+    align-self: center;
+    max-width: 100%;
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Information Section */
+
+.mobile-image {
+  display: none;
+}
+
+.information h2 {
+  padding: 2rem 0 1.5rem 0;
+}
+
+.flex-column h3 {
+  padding: 1rem 0 0.5rem 0;
+}
+
+.information h5 {
+  padding-top: 2rem;
+}
+
+.information span {
+  font-size: medium;
+  color: blue;
+}
+
+.small-block:hover {
+  background-color: lightgray;
+}
+
+@media only screen and (max-width: 872px) {
+  .information .large-info {
+    display: none;
+  }
+
+  .information .small-image {
+    display: none;
+  }
+
+  .information .small-info {
+    width: 100%;
+    padding: 0;
+  }
+
+  .information .small-block {
+    border-bottom: none;
+    margin: 0 auto;
+  }
+
+  .small-block .flex-column {
+    width: auto;
+    padding: 1rem 2rem 1rem 2rem;
+    
+  }
+
+  .information img {
+    max-width: 576px;
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    flex-shrink: 1;
+  }
+
+  .mobile-image {
+    display: block;
+  }
+
+  .information h3,
+  .information p,
+  .information span {
+    padding-left: 1rem;
+  }
+}
+
+/* Course Section */
+.course {
+  background-color: #e1dfdf;
+}
+
+.course h2 {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.subjects {
+  padding: 0 4.5rem 2rem 4.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1168px;
+  margin: 0 auto;
+}
+
+.subject {
+  max-width: 21rem;
+  margin: 1rem;
+  background-color: white;
+}
+
+.subject img {
+  max-width: 100%;
+  height: auto;
+}
+
+.subject-info {
+  padding: 1rem;
+}
+
+.subject-info span {
+  padding: 0.5rem 0;
+  display: block;
+}
+
+.subject-info p {
+  padding-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .course {
+    background-color: white;
+    margin: 2rem 4.5rem 2rem 4.5rem;
+   }
+
+  .course h2 {
+    padding-bottom: 1rem;
+   }
+
+  .subject img,
+  .subject span,
+  .subject p {
+    display: none;
+  }
+
+  .subject h4 {
+        text-align: center;
+    }
+
+  .subjects {
+    width: auto;
+    padding: 0;
+    flex-direction: column;
+   }
+
+  .subject {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .subject-info {
+    margin: 1rem 0 0.5rem 0;
+    padding: 1rem 0 1rem 0;
+    background-color: lightgray;
+  }
+}
+
+/* Thesis Section */
+.thesis {
+  border-bottom: 1px solid lightgray;
+}
+
+.large-info {
+  width: 60%;
+}
+
+.thesis h2 {
+  padding-top: 2rem;
+  text-align: center;
+
+}
+
+.large-info h3 {
+  padding: 1.5rem 0 0.9rem;
+}
+
+@media only screen and (max-width: 872px) {
+  .thesis .small-info {
+    display: none;
+  }
+
+  .thesis .large-info {
+    width: 100%;
+    margin: 2rem 0 2rem 0;
+  }
+
+  .thesis h3,
+  .thesis p {
+    display: none;
+  }
+}
+
+/* Footer Section */
+footer {
+  padding: 1rem 1.5rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+footer h5 {
+  font-weight: normal;
+}
+
+footer li {
+  padding: 0 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  
+  footer {
+    margin-bottom: 0;
+  }
+}
